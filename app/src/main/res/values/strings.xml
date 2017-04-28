@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Giphy Downloader</string>
+    <string name="error_message">Fetch issue: %1$s</string>
 </resources>

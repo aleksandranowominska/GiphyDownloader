@@ -12,14 +12,14 @@ public class GiphyResponse {
     public GiphyMeta meta;
 
     public class GiphyData {
-        public GiphyImageTypes imageTypes;
+        public GiphyImageTypes images;
     }
 
     public class GiphyImageTypes {
-        public GiphyFixedHeightImage fixedHeight;
+        public GiphyImage original;
     }
 
-    public class GiphyFixedHeightImage {
+    public class GiphyImage {
         public String url;
     }
 

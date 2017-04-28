@@ -6,10 +6,15 @@
     android:layout_height="match_parent"
     tools:context="pl.ola.giphydownloader.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_centerInParent="true"/>
+   <GridView
+       android:id="@+id/trendingPhotosGridView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:verticalSpacing="10dp"
+       android:numColumns="auto_fit"
+       android:gravity="center"
+       android:columnWidth="100dp"
+       android:stretchMode="spacingWidth" />
+
 
 </RelativeLayout>
