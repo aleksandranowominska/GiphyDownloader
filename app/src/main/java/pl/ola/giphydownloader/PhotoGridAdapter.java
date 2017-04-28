@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.koushikdutta.ion.Ion;
 
 import java.util.List;
 
@@ -63,12 +63,20 @@ public class PhotoGridAdapter extends BaseAdapter {
 
         ImageView imageView = (ImageView) view.findViewById(R.id.downloadedImage);
         Log.d("ble", fullURL);
-        Glide.with(mContext)
-                .load(fullURL)
-                .asGif()
-                //.placeholder(R.drawable.loading_gif)
-                .into(imageView);
+//        Glide.with(mContext)
+//                .load(fullURL)
+//                .asGif()
+//                .placeholder(R.drawable.loading_gif)
+//                .into(imageView);
 
+        Ion.with(mContext)
+                .load(fullURL)
+                .withBitmap()
+//                .placeholder(R.drawable.placeholder_image)
+//                .error(R.drawable.error_image)
+//                .animateLoad(spinAnimation)
+//                .animateIn(fadeInAnimation)
+                .intoImageView(imageView);
         return view;
     }
 }
