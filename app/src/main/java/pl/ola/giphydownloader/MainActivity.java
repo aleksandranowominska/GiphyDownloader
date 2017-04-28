@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     List<GiphyResponse.GiphyData> fetchedImages = new ArrayList<>();
 
     GridView trendingPhotosGridView;
-PhotoGridAdapter adapter;
+    PhotoGridAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +37,6 @@ PhotoGridAdapter adapter;
     @Override
     protected void onResume() {
         super.onResume();
-
-
     }
 
     private void fetchTrendingPhotos() {

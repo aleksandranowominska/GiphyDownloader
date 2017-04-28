@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Giphy Downloader</string>
+    <string name="main_activity_title">Trending GIFs</string>
     <string name="error_message">Fetch issue: %1$s</string>
 </resources>

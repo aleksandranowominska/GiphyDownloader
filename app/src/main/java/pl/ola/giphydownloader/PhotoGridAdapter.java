@@ -59,19 +59,14 @@ public class PhotoGridAdapter extends BaseAdapter {
             view = LayoutInflater.from(mContext).inflate(R.layout.grid_cell, viewGroup, false);
 
         GiphyResponse.GiphyData photo = photos.get(row);
-        String fullURL = photo.images.original.url;
+        String fullURL = photo.images.downsized.url;
 
         ImageView imageView = (ImageView) view.findViewById(R.id.downloadedImage);
         Log.d("ble", fullURL);
-//        Glide.with(mContext)
-//                .load(fullURL)
-//                .asGif()
-//                .placeholder(R.drawable.loading_gif)
-//                .into(imageView);
 
         Ion.with(mContext)
                 .load(fullURL)
-                .withBitmap()
+                .withBitmap() //TODO: add fancy drawables
 //                .placeholder(R.drawable.placeholder_image)
 //                .error(R.drawable.error_image)
 //                .animateLoad(spinAnimation)

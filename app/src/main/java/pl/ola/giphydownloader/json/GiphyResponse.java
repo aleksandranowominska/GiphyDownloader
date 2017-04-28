@@ -16,7 +16,7 @@ public class GiphyResponse {
     }
 
     public class GiphyImageTypes {
-        public GiphyImage original;
+        public GiphyImage downsized;
     }
 
     public class GiphyImage {
